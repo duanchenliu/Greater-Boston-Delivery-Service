@@ -30,14 +30,25 @@ function purchaseClicked() {
     alert('Thank you for your purchase')
     // clear all items in the cart
     var cartItems = document.getElementsByClassName('cart-items')[0]
+    // log the item names
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
         console.log(cartItemNames[i].innerText)
     }
+    // log the quantities
     var cartItemQuantity = cartItems.getElementsByClassName('cart-quantity-input')
     for (var j = 0; j < cartItemQuantity.length; j++){
         console.log(cartItemQuantity[j].value)
     }
+
+    // get personal information
+    var name = document.getElementById('name').value;
+    var address = document.getElementById('address').value;
+    var phone = document.getElementById('phone').value;
+    console.log(name)
+    console.log(phone)
+    console.log(address)
+    
 
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
