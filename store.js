@@ -61,6 +61,10 @@ function purchaseClicked() {
         Cookies.set(names, quats)
     }
     Cookies.set('Total', totalAmount)
+    Cookies.set('Name', name)
+    Cookies.set('Address', address)
+    Cookies.set('Phone', phone)
+
 
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
