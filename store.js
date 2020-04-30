@@ -40,6 +40,9 @@ function purchaseClicked() {
     for (var j = 0; j < cartItemQuantity.length; j++){
         console.log(cartItemQuantity[j].value)
     }
+    // total amount $
+    var totalAmount = document.getElementsByClassName('cart-total-price')[0].innerText
+    console.log(totalAmount)
 
     // get personal information
     var name = document.getElementById('name').value;
@@ -49,6 +52,15 @@ function purchaseClicked() {
     console.log(phone)
     console.log(address)
     
+    //remove all cookies
+    deleteAllCookies()
+    // try set cookie
+    for (var k = 0; k < cartItemNames.length; k++){
+        var names = cartItemNames[k].innerText;
+        var quats = cartItemQuantity[k].value;
+        Cookies.set(names, quats)
+    }
+    Cookies.set('Total', totalAmount)
 
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
@@ -122,4 +134,20 @@ function updateCartTotal() {
     }
     total = Math.round(total * 100) / 100
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+}
+
+
+
+
+
+
+function deleteAllCookies() {
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+    }
 }
