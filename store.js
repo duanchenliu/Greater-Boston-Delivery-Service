@@ -89,6 +89,7 @@ function quantityChanged(event) {
 
 function addToCartClicked(event) {
     var button = event.target
+    button.style.background = "#7FFF00"
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
@@ -123,6 +124,8 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
     alert('Item added to cart. :)')
+    // var button = document.getElementById('btn-add')
+    // button.style.background = "#7FFF00"
 }
 
 function updateCartTotal() {
