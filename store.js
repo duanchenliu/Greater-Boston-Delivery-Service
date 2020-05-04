@@ -65,12 +65,29 @@ function purchaseClicked() {
     Cookies.set('Address', address)
     Cookies.set('Phone', phone)
 
+    //pdf tryyyyyy plz work
+    var doc = new jsPDF();
+    var specialElementHandlers = {
+        '#editor': function (element, renderer) {
+           return true;
+        }
+    };
+    ($('#purchase')).click(function () {
+        doc.fromHTML($('#results').html(), 15, 15, {
+            'width': 170,
+                'elementHandlers': specialElementHandlers
+        });
+        doc.save('sample-file.pdf');
+    });
+
 
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
     // set total to zero
     updateCartTotal()
+
+
 }
 
 function removeCartItem(event) {
