@@ -122,6 +122,7 @@ function quantityChanged(event) {
 function addToCartClicked(event) {
     var button = event.target
     button.style.background = "#7FFF00"
+    $('<div>已加入购物车 :)</div>').insertBefore(button).delay(1500).fadeOut();
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
@@ -158,7 +159,7 @@ function addItemToCart(title, price, imageSrc) {
     cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
     //update the div quantityvalue to 1 when added to cart - for pdf
     cartRow.getElementsByClassName('quantityvalue')[0].innerText = 1
-    alert('Item added to cart. :)')
+    // alert('Item added to cart. :)')
 
 }
 
