@@ -180,18 +180,33 @@ function updateCartTotal() {
     var cartItemContainer = document.getElementsByClassName('cart-items')[0]
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')
     var total = 0
+    var numberofitems = 0
+    var shipping = 0
     for (var i = 0; i < cartRows.length; i++) {
         var cartRow = cartRows[i]
         var priceElement = cartRow.getElementsByClassName('cart-price')[0]
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
         var price = parseFloat(priceElement.innerText.replace('$', ''))
-        var quantity = quantityElement.value
+        var quantity = quantityElement.value //quantity is string
+        numberofitems = numberofitems + parseInt(quantity)
         total = total + (price * quantity)
         //update the div quantityvalue to match the current quantity - for pdf 
         cartRow.getElementsByClassName('quantityvalue')[0].innerText = quantity
     }
     total = Math.round(total * 100) / 100
+    console.log(numberofitems)
+    shipping = 3 * numberofitems
+    // total price >= 100, shipping is free
+    if (total>=100){
+        shipping = 0
+    }
+    // shipping fee cannot go above 15
+    if (shipping>=15){
+        shipping = 15
+    }
+
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
+    document.getElementsByClassName('shippingprice')[0].innerText = '$' + shipping
 }
 
 
