@@ -264,6 +264,7 @@ html, body {
     width: 20%;
     font-size: 1.2em;
     color: #333;
+    padding-top: 20px;
 }
 
 .cart-quantity {
@@ -343,3 +344,11 @@ html, body {
     height: 250pt;
 }
 
+
+.column{
+    padding-left: 100pt;
+    padding-right: 100pt;
+    padding-top: 100pt;
+    padding-bottom: 100pt;
+    /* width: auto; */
+}

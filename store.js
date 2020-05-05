@@ -134,6 +134,8 @@ function addToCartClicked(event) {
 function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
+    //set one item as a row, used with the column below
+    cartRow.classList.add('row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
@@ -143,16 +145,27 @@ function addItemToCart(title, price, imageSrc) {
         }
     }
     var cartRowContents = `
-        <div class="cart-item cart-column">
+        <div class="column cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="50" height="50">
             <span class="cart-item-title">${title}</span>
+            <p class="quantityvalue" style="visibility: hidden"> </p>
         </div>
-        <span class="cart-price cart-column">${price}</span>
-        <div class="cart-quantity cart-column">
+        &nbsp
+        &nbsp
+        &nbsp
+        <div> 
+        <p class="quantityvalue" style="visibility: hidden"> </p>
+        <span class="column cart-price cart-column">${price}</span>
+        </div>
+        &nbsp
+        &nbsp
+        &nbsp
+        <div class="column cart-quantity cart-column">
+            <p class="quantityvalue" style="visibility: hidden"> </p>
             <input class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger" type="button">REMOVE</button>
-            <div class="quantityvalue"> </div>
         </div>`
+
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
     cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
