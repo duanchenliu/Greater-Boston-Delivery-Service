@@ -204,9 +204,13 @@ function updateCartTotal() {
     if (shipping>=15){
         shipping = 15
     }
+    var totalamount = 0
+    totalamount = shipping + total
 
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total
     document.getElementsByClassName('shippingprice')[0].innerText = '$' + shipping
+    document.getElementsByClassName('totalamount')[0].innerText = '$' + totalamount
+    
 }
 
 
