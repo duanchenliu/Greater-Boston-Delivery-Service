@@ -352,3 +352,7 @@ html, body {
     padding-bottom: 100pt;
     /* width: auto; */
 }
+
+h2{
+    background-color: royalblue;
+}
