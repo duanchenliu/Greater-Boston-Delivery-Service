@@ -13,22 +13,64 @@
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>  -->
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
         <script src="chinese-normal.js"></script>
-        <script src="store.js" async></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>  
+        <script src="store.js" async></script>
         <!-- <link rel="stylesheet" href="styles.css" /> -->
     </head>
     <body>
-        <header class="main-header">
-            <nav class="main-nav nav">
-                <ul>
-                    <!-- <li><a href="index.html">HOME</a></li> -->
-                    <!-- <li><a href="store.html">STORE</a></li> -->
-                    <!-- <li><a href="about.html">ABOUT</a></li> -->
-                </ul>
-            </nav>
-        </header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Top</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <!-- <li class="nav-item active">
+                  <a class="nav-link" href="#cheese">奶制品 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      商品类别
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#categoryone">奶油类cheese及Vanilla Extract</a>
+                      <a class="dropdown-item" href="#categorytwo">水果</a>
+                      <a class="dropdown-item" href="#categorythree">蔬菜</a>
+                      <a class="dropdown-item" href="#categoryfour">肉类</a>
+                      <a class="dropdown-item" href="#categoryfive">海鲜</a>
+                      <a class="dropdown-item" href="#categorysix">蛋类</a>
+                      <a class="dropdown-item" href="#categoryseven">面粉</a>
+                      <a class="dropdown-item" href="#categoryeight">苏打和酵母</a>
+                      <a class="dropdown-item" href="#categorynine">米</a>
+                      <a class="dropdown-item" href="#categoryten">豆类</a>
+                      <a class="dropdown-item" href="#categoryeleven">油类</a>
+                      <a class="dropdown-item" href="#categorytwelve">面包面条春卷麦片</a>
+                      <a class="dropdown-item" href="#categorythirteen">小食品</a>
+                      <a class="dropdown-item" href="#categoryfourteen">小菜&战备食品罐头</a>
+                      <a class="dropdown-item" href="#categoryfifteen">调味品</a>
+                      <a class="dropdown-item" href="#categorysixteen">饮品及冰激淋</a>
+                      <a class="dropdown-item" href="#categoryseventeen">蛋糕🍰</a>
+                      <a class="dropdown-item" href="#categoryeighteen">手套</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#results">购物车</a>
+                </li>
+                
+              </ul>
+            </div>
+          </nav>
         <section class="container content-section">
             <h1 class="band-name band-name-large">🍎乐生活</h1>
         </section>
@@ -51,7 +93,7 @@
         <br>
         
         <!-- first product type -->
-        <section class="container content-section">
+        <section id="categoryone" class="container content-section">
             <div class="card">
                 <h2 class="card-body section-header">奶油类cheese及Vanilla Extract</h2>
             </div>
@@ -441,7 +483,7 @@
 
 
             <!-- Second product type -->
-            <section class="container content-section">
+            <section id="categorytwo" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">水果</h2>
                 </div>
@@ -755,7 +797,7 @@
             <br>
 
             <!-- Third product type -->
-            <section class="container content-section">
+            <section id="categorythree" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">蔬菜</h2>
                 </div>
@@ -1255,7 +1297,7 @@
 
 
             <!-- Fourth product type -->
-            <section class="container content-section">
+            <section id="categoryfour" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">肉类</h2>
                 </div>
@@ -1592,7 +1634,7 @@
 
 
             <!-- Fifth product type -->
-            <section class="container content-section">
+            <section id="categoryfive" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">海鲜</h2>
                 </div>
@@ -1686,7 +1728,7 @@
 
 
             <!-- Sixth product type -->
-            <section class="container content-section">
+            <section id="categorysix" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">蛋类</h2>
                 </div>
@@ -1727,7 +1769,7 @@
 
 
             <!-- Seventh product type -->
-            <section class="container content-section">
+            <section id="categoryseven" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">面粉</h2>
                 </div>
@@ -2011,7 +2053,7 @@
         <br>
 
             <!-- Eighth product type -->
-            <section class="container content-section">
+            <section id="categoryeight" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">苏打和酵母</h2>
                 </div>
@@ -2103,7 +2145,7 @@
         <br>
 
             <!-- Ninth product type -->
-            <section class="container content-section">
+            <section id="categorynine" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">米</h2>
                 </div>
@@ -2360,7 +2402,7 @@
             
 
             <!-- Tenth product type -->
-            <section class="container content-section">
+            <section id="categoryten" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">豆类</h2>
                 </div>
@@ -2565,7 +2607,7 @@
 
 
             <!-- Eleventh product type -->
-            <section class="container content-section">
+            <section id="categoryeleven" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">油类</h2>
                 </div>
@@ -2795,7 +2837,7 @@
             <br>
 
             <!-- Twelfth product type -->
-            <section class="container content-section">
+            <section id="categorytwelve" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">面包面条春卷麦片</h2>
                 </div>
@@ -3084,7 +3126,7 @@
 
 
             <!-- Thirteenth product type -->
-            <section class="container content-section">
+            <section id="categorythirteen" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">小食品</h2>
                 </div>
@@ -3507,7 +3549,7 @@
 
 
             <!-- Fourteenth product type -->
-            <section class="container content-section">
+            <section id="categoryfourteen" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">小菜&战备食品罐头</h2>
                 </div>
@@ -3771,7 +3813,7 @@
 
 
             <!-- Fifteenth product type -->
-            <section class="container content-section">
+            <section id="categoryfifteen" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">调味品</h2>
                 </div>
@@ -3980,7 +4022,7 @@
 
 
             <!-- Sixteenth product type -->
-            <section class="container content-section">
+            <section id="categorysixteen" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">饮品及冰激淋</h2>
                 </div>
@@ -4325,7 +4367,7 @@
             <br>
 
             <!-- Seventeenth product type -->
-            <section class="container content-section">
+            <section id="categoryseventeen" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">蛋糕🍰</h2>
                 </div>
@@ -4499,7 +4541,7 @@
 
 
             <!-- Eighteenth product type -->
-            <section class="container content-section">
+            <section id="categoryeighteen" class="container content-section">
                 <div class="card">
                     <h2 class="card-body section-header">手套</h2>
                 </div>
